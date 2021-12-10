@@ -20,16 +20,14 @@ public class GraphicsController {
 
     private double height;
     private double width;
-    private double c;
-    private double a;
 
 
     @javafx.fxml.FXML
     public void compute(ActionEvent actionEvent) {
         getValues();
         Rectangular r = new Rectangular(height,width);
-        c = r.computeCircumference();
-        a = r.computeArea();
+        double c = r.computeCircumference();
+        double a = r.computeArea();
         area.setText(String.valueOf(a));
         circumference.setText(String.valueOf(c));
     }
